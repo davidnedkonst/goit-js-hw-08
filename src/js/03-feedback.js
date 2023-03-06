@@ -11,7 +11,7 @@ refs = {
     time2: 500,
     form: document.querySelector('form.feedback-form'),
     formEmail: document.querySelector('input[name="email"]'),
-    formMessage: document.querySelector('textarea')
+    formMessage: document.querySelector('textarea[name="message"]')
 };
 
 // Functions

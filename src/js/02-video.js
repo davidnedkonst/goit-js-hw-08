@@ -2,7 +2,7 @@
 
 import Player from "@vimeo/player";
 import throttle from 'lodash.throttle';
-import resetStorage from './common';
+import resetStorage from "./common";
 
 // Data
 
@@ -15,16 +15,12 @@ refs = {
 // Functions
 
 function onTimeUpdate(event) {
-    localStorage.setItem(refs.key1, `${event.seconds}`);
-    console.log('Current time = ' + localStorage.getItem(refs.key1));
+    resetStorage(refs.key1, event.seconds);
 };
 
 // Main
 
-if (!localStorage.getItem(refs.key1)) {
-    // localStorage.setItem(keyVideoplayerCurrentTime, '0');
-    resetStorage(refs.key1, 0);
-}
+if (!localStorage.getItem(refs.key1)) resetStorage(refs.key1, 0);
 
 const player = new Player(refs.iframe);
 

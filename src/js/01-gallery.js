@@ -1,6 +1,6 @@
 //Import
 
-import { galleryItems } from './gallery-items.js';
+import galleryItems from './gallery-items.js';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
@@ -23,12 +23,12 @@ function imageHTML(largeImageJpg, smallImageJpg, imageDescription) {
 
 //Main
 
-const refs = {galleryUl: document.querySelector('ul.gallery')};
+const refs = { galleryUl: document.querySelector('ul.gallery') };
 
 galleryItems.map(item => refs.galleryUl.insertAdjacentHTML(
-        'beforeend',
-        imageHTML(item.original, item.preview, item.description)
-    )
+    'beforeend',
+    imageHTML(item.original, item.preview, item.description)
+)
 );
 
 let lightbox = new SimpleLightbox('ul.gallery a.gallery__link', {
