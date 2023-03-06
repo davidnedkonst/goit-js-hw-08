@@ -1,6 +1,7 @@
 // Import 
 
 import throttle from 'lodash.throttle';
+import resetStorage from './common';
 
 // Data
 
@@ -59,10 +60,6 @@ function onSubmit(event) {
     localStorage.setItem(refs.key, JSON.stringify(refs.a));
 
     return 1;
-}
-
-function resetStorage(key, data) {
-    localStorage.setItem(key, JSON.stringify(data));
 }
 
 function resetForm(key) {
