@@ -45,7 +45,7 @@ function onSubmit(event) {
     event.preventDefault();
     // console.log("Run onSubmit()");
 
-    if (refs.formEmail.value === "" & refs.formMessage.value === "") {
+    if (refs.formEmail.value === "" || refs.formMessage.value === "") {
         alert("Error");
         return 0;
     }
